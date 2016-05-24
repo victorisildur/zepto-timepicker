@@ -1,0 +1,94 @@
+.timepicker {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: none;
+    background-color: rgba(0,0,0,0.5);
+
+    .tp-dialog {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 300px;
+        height: 180px; /* 50*3 + 30*/
+        margin-left: -150px;
+        margin-top: -90px;
+        background-color: rgba(0,0,0,0.95);
+
+        .tp-content {
+            position: absolute;
+            top: 0;
+            bottom: 30px;
+            width: 100%;
+
+            .time-col-container {
+                position: absolute;
+                width: 50%;
+                height: 100%;
+                box-sizing: border-box;
+                overflow: auto;
+                
+                .time-col {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+
+                    font-size: 40px;
+                    color: white;
+                    text-align: center;
+                    li {
+                        height: 50px;
+                        line-height: 50px;
+                        box-sizing: border-box;
+                    }
+                }
+                &.hour-col {
+                    left: 0;
+                }
+                &.min-col {
+                    left: 50%;
+                }
+            }
+            .time-line {
+                position: absolute;
+                display: block;
+                width: 40%;
+                height: 5px;
+
+                background-color: #12b7f5;
+                &.is-left {
+                    left: 5%;
+                }
+                &.is-right {
+                    left: 55%;
+                }
+                &.is-top {
+                    top: 45px; /* 50-5 */
+                }
+                &.is-bottom {
+                    top: 100px; /* 100 */
+                }
+            }
+        }
+        .tp-op {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 30px;
+            .op {
+                display: inline-block;
+                width: 50%;
+                height: 100%;
+                line-height: 30px;
+                box-sizing: border-box;
+                
+                text-align: center;
+                border-top: 1px solid #ccc;
+                color: white;
+            }
+        }
+    }
+}
